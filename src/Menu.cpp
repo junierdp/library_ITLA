@@ -134,6 +134,13 @@ void Menu::addBook()
 void Menu::getLastBook()
 {
 	//TODO: Implement this
+	cout << "\n********** The last book is **********" << endl;
+	Element* e = stack ->pop();
+	if(e != NULL){
+		cout << "Title: " << e ->getTitle() << "\tAuthor: " << e ->getAuthor() <<
+				"\tPublisher: " << e ->getPublisher() << "\tDate: " << e ->getDate() <<
+				"\tCategory: " << e ->getCategory() << endl;
+	}
 }
 
 void Menu::getByCategory()
