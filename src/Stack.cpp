@@ -24,7 +24,12 @@ void Stack::push(Element* element)
 Element* Stack::pop()
 {
 	//TODO: Implement this method.
-	return NULL;
+	if(_last == NULL){
+		return NULL;
+	}
+	Element* e = _last;
+	_last = e -> _next;
+	return e;
 }
 
 Stack::Stack(): _last(NULL)
