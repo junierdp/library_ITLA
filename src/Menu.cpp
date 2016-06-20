@@ -95,6 +95,14 @@ Stack* _stack = new Stack();
 void Menu::getAllBooks()
 {
 	//TODO: Implement this
+	cout << "\n********** All books **********" << endl;
+	Element* e = stack ->pop();
+	while(e != NULL){
+		cout << "Title: " << e ->getTitle() << "\tAuthor: " << e ->getAuthor() <<
+				"\tPublisher: " << e ->getPublisher() << "\tDate: " << e ->getDate() <<
+				"\tCategory: " << e ->getCategory() << endl;
+		e = stack ->pop();
+	}
 }
 
 void Menu::addBook()
