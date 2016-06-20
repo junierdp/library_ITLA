@@ -7,6 +7,7 @@
 
 #include "Menu.h"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -89,6 +90,8 @@ bool Menu::validate(int option)
 	}
 }
 
+Stack* _stack = new Stack();
+
 void Menu::getAllBooks()
 {
 	//TODO: Implement this
@@ -97,7 +100,27 @@ void Menu::getAllBooks()
 void Menu::addBook()
 {
 	//TODO: Implement this
+	string title, author, publisher, date, category;
+	cout << "********** Add a book **********" << endl;
+	cout << "Type the name of the book => ";
+	cin >> title;
 
+	cout << "Type the name of the author => ";
+	cin >> author;
+
+	cout << "Type the name of the publisher => ";
+	cin >> publisher;
+
+	cout << "Type the date of the publishing => ";
+	cin >> date;
+
+	cout << "Type the category of the book => ";
+	cin >> category;
+
+	Element* e = new Element(title, author, publisher, date, category);
+	stack ->push(e);
+
+	cout << "\n The book has been added." << endl;
 }
 
 void Menu::getLastBook()
